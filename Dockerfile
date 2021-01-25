@@ -4,31 +4,29 @@
 # Authors: Gian Diethelm, Dima Leibundgut, Cyrill Ettlin
 ############################################################
 
-#FROM nginx:alpine
 
-#RUN rm -rf /usr/share/nginx/html/*
-
-#COPY index.html /usr/share/nginx/html/
-
-#COPY nginx.conf /etc/nginx/nginx.conf
-
-#EXPOSE 80
 
 FROM ubuntu:latest
+#Use the standart ubuntu image
 
 RUN apt update
+#Update the whole system
 
 RUN apt-get -y install openssh-server
+#Install the SSH-service
 
 RUN apt-get install -y nginx
+#Install the nginx webserver
 
 RUN systemctl enable nginx
+#Put the nginx service into autostart
 
 COPY nginx.conf /etc/nginx/nginx.conf
+#Copy the local nginx configuration into the Docker
+
+RUN apt-get install -y mysql-server
 
 EXPOSE 80
-
-EXPOSE 22
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
