@@ -1,12 +1,17 @@
-#
-#  _____ _____  _____          _                     _ _           _                           
-# |_   _|  __ \|  __ \ /\     | |                   | | |         | |                          
-#   | | | |  | | |__) /  \    | |     ___   __ _  __| | |__   __ _| | __ _ _ __   ___ ___ _ __ 
-#   | | | |  | |  ___/ /\ \   | |    / _ \ / _` |/ _` | '_ \ / _` | |/ _` | '_ \ / __/ _ \ '__|
-#  _| |_| |__| | |  / ____ \  | |___| (_) | (_| | (_| | |_) | (_| | | (_| | | | | (_|  __/ |   
-# |_____|_____/|_| /_/    \_\ |______\___/ \__,_|\__,_|_.__/ \__,_|_|\__,_|_| |_|\___\___|_|                                                                                               
-#
-#
++-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+
+|I|D|P|A| |L|o|a|d|b|a|l|a|n|c|e|r|
++-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+
 
 
-A simple Loabalancer
+Description:
+A simple loabalancer between two or several hosts. 
+
+This Loadbalancer was part of our IDPA work.
+
+Usage: 
+The best way to use our loadbalancer is with the docker container. 
+
+Docker command: 
+docker push 20200608/220001:latest
+
+Otherwise you can just clone our git project and run the server.js.
