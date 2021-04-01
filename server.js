@@ -1,9 +1,3 @@
-//let express = require('express');
-//let uuid = require('node-uuid');
-/*let cookieSession = require('cookie-session')
-let Keygrip = require("keygrip") ;
-let app = express();*/
-
 //Call the needed modules
 let http = require('http'),
     httpProxy = require('http-proxy');
@@ -17,9 +11,17 @@ let serversaddresses = [
     "127.0.0.1:5050"
 ];
 
+let ipaddr = str.split(":");
+console.log(ipaddr[0]);
+
+(async () => {
+  console.log(await isPortReachable(80, {host: 'google.com'}));
+  //=> true
+})();
 
 let i = 0;
 
+//Round Robin Mode
 function runproxy(){
   let proxy = httpProxy.createProxyServer({});
   let server = http.createServer(function(req, res) {
@@ -37,9 +39,8 @@ server.listen(3000);
 }
 
 
+//An other disabled Mode which works with a random number
 /*function runproxy(){
-  let randomnumber = Math.random();
-  randomnumber = randomnumber % 2;
   let proxy = httpProxy.createProxyServer({});
   let randomnumber = Math.random();
   randomnumber = randomnumber % 2;
@@ -47,6 +48,7 @@ server.listen(3000);
     proxy.web(req, res, { 
        target: 'http://'+serversaddresses[randomnumber]});
       randomnumber = Math.random();
+      randomnumber = randomnumber % 2;
        console.log(i);
        if(i >= serversaddresses.length){
        }
