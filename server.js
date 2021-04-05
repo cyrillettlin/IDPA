@@ -8,7 +8,6 @@
 //Call the needed modules
 let http = require('http'),
     httpProxy = require('http-proxy');
-let isPortReachable = require('is-port-reachable');
 
 //Put your IP-address with the needed port into this array
 let serversaddresses = [
