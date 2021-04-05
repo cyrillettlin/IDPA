@@ -34,8 +34,8 @@ function runproxy(){
        }
   });
 
-  console.log("listening on port 3000");
-server.listen(3000);
+  console.log("listening on port 80");
+server.listen(80);
 }
 
 
@@ -54,8 +54,8 @@ server.listen(3000);
        }
   });
 
-  console.log("listening on port 3000");
-server.listen(3000);
+  console.log("listening on port 80");
+server.listen(80);
 }*/
 
 runproxy();
