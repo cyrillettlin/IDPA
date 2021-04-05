@@ -12,6 +12,6 @@ This Loadbalancer was part of our IDPA work.
 The best way to use our loadbalancer is with the docker container. 
 
 ###### Docker command: 
-** docker push 20200608/220001:latest **
+**docker push 20200608/220001:latest**
 
 Otherwise you can just clone our git project and run the server.js.
