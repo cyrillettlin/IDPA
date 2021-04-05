@@ -1,3 +1,10 @@
+//############################################################
+//# Loadbalancer executable
+
+//# Authors: Gian Diethelm, Dima Leibundgut, Cyrill Ettlin
+//############################################################
+
+
 //Call the needed modules
 let http = require('http'),
     httpProxy = require('http-proxy');
@@ -7,17 +14,10 @@ let isPortReachable = require('is-port-reachable');
 let serversaddresses = [
     //Example 
     //"127.0.0.1:8080",
-    "127.0.0.1:8080",
-    "127.0.0.1:5050"
+    "185.70.196.210:80",
+    "209.151.149.201:80"
 ];
 
-let ipaddr = str.split(":");
-console.log(ipaddr[0]);
-
-(async () => {
-  console.log(await isPortReachable(80, {host: 'google.com'}));
-  //=> true
-})();
 
 let i = 0;
 
